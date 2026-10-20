@@ -45,48 +45,61 @@ The dataset annotations were converted from Pascal VOC XML format to YOLO format
 ## Model Evaluation
 
 The model was trained for 5 epochs using YOLOv8n and evaluated on the 99-image test set.
-
-Metric	Score
-Precision	0.854
-Recall	0.753
-mAP@50	0.861
-mAP@50–95	0.524
-
+ ___________|_________
+|   Metric	|   Score |
+|Precision	| 0.854   |
+|Recall	    | 0.753   |
+|mAP@50	    | 0.861   |
+|mAP@50–95	| 0.524   |
+|___________|_________|
 These results are baseline evaluation metrics. Performance may vary on unseen images and real-world CCTV footage.
 
 ## Project Structure
 
 uniform-detection/
-├── README.md
-├── predict.py
-├── requirements.txt
-├── .gitignore
+├── examples/
+│   ├── input.jpg
+│   └── prediction.jpg
 ├── weights/
 │   └── best.pt
-└── examples/
-    └── input.jpg
+├── .gitignore
+├── predict.py
+├── requirements.txt
+└── README.md
 
 ### Installation
 
 1. Clone this repository:
 
-git clone YOUR_GITHUB_REPOSITORY_URL
+```bash
+git clone [(https://github.com/kripa-sharma09/yolov8-uniform-detection)]
 cd uniform-detection
+```
 
 2. Install the dependencies:
-
+```bash
 python -m pip install -r requirements.txt
+```
 
 3. Download or obtain the trained model weights and place best.pt inside the weights/ folder.
 4. Place an input image at examples/input.jpg.
 
 ### Run Prediction
 
-Execute the following command:
+Run the following command to detect uniforms in an image:
 
-python predict.py
+```bash
+ python predict.py --source "examples/input.jpg"
+```
+To predict on a different image, provide its file path:
 
-The model processes the input image and saves the annotated prediction in the generated runs/detect/predict/ directory.
+```bash
+ python predict.py --source "path/to/your/image.jpg"
+```
+
+The model detects proper and improper uniforms and displays bounding boxes, class labels, and confidence scores.
+
+The annotated prediction image is saved in the generated runs/detect/ directory.
 
 ## Limitations
 
