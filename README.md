@@ -40,7 +40,7 @@ The dataset contains images split into training, validation, and testing sets.
 * Validation images: 200
 * Test images: 99
 
-The dataset annotations were converted from Pascal VOC XML format to YOLO format. Refer to the original dataset source and its license before downloading or redistributing the data.
+The dataset annotations were converted from Pascal VOC XML format to YOLO format. Refer to the original dataset source and its license before downloading or redistributing the data.The dataset was sourced from Roboflow Universe and used for educational and experimental purposes.
 
 ## Model Evaluation
 
