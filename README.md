@@ -45,17 +45,18 @@ The dataset annotations were converted from Pascal VOC XML format to YOLO format
 ## Model Evaluation
 
 The model was trained for 5 epochs using YOLOv8n and evaluated on the 99-image test set.
- ___________|_________
-|   Metric	|   Score |
-|Precision	| 0.854   |
-|Recall	    | 0.753   |
-|mAP@50	    | 0.861   |
-|mAP@50–95	| 0.524   |
-|___________|_________|
+
+| Metric | Score |
+| --- | ---: |
+| Precision | 0.854 |
+| Recall | 0.753 |
+| mAP@50 | 0.861 |
+| mAP@50–95 | 0.524 |
 These results are baseline evaluation metrics. Performance may vary on unseen images and real-world CCTV footage.
 
 ## Project Structure
 
+```text
 uniform-detection/
 ├── examples/
 │   ├── input.jpg
@@ -66,7 +67,7 @@ uniform-detection/
 ├── predict.py
 ├── requirements.txt
 └── README.md
-
+```
 ### Installation
 
 1. Clone this repository:
