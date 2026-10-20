@@ -52,6 +52,7 @@ The model was trained for 5 epochs using YOLOv8n and evaluated on the 99-image t
 | Recall | 0.753 |
 | mAP@50 | 0.861 |
 | mAP@50–95 | 0.524 |
+
 These results are baseline evaluation metrics. Performance may vary on unseen images and real-world CCTV footage.
 
 ## Project Structure
