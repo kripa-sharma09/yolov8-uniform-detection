@@ -1,12 +1,31 @@
+import argparse
 from ultralytics import YOLO
 
-# Load the trained uniform detection model
-model = YOLO("weights/best.pt")
 
-# Predict on an input image
-results = model.predict(
-    source="examples/input.jpg",
-    save=True
-)
+def main():
+    parser = argparse.ArgumentParser(
+        description="Detect proper and improper uniforms in an image."
+    )
 
-print("Prediction completed!")
+    parser.add_argument(
+        "--source",
+        required=True,
+        help="Path to the input image"
+    )
+
+    args = parser.parse_args()
+
+    # Load the trained YOLOv8 model
+    model = YOLO("weights/best.pt")
+
+    # Run prediction and save the annotated image
+    model.predict(
+        source=args.source,
+        save=True
+    )
+
+    print("Prediction completed!")
+
+
+if __name__ == "__main__":
+    main()
